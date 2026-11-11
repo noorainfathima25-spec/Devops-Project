@@ -1,3 +1,14 @@
+## 📁 Project Structure
+
+```
+📁 Devops-Project/
+   📄 README.md
+   📘 DEVOPS-PROJECT-1.docx
+   📁 ansible/
+      ⚙️ play.yml
+   📁 jenkins/
+      📄 README.md
+```
 # AWS DevOps Lifecycle Implementation
 ## Capstone Project – Abode Software
 
