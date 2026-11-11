@@ -1,0 +1,22 @@
+- name: Configure test and production servers
+hosts: slaves
+become: true
+
+tasks:
+- name: Update package repository
+apt:
+update_cache: yes
+
+- name: Install Java and Docker
+apt:
+name:
+- fontconfig
+- openjdk-21-jre
+- docker.io
+state: present
+
+- name: Enable Docker service
+service:
+name: docker
+state: started
+enabled: yes
