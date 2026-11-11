@@ -85,3 +85,39 @@ Configured three Jenkins jobs:
 ## 9. Conclusion
 
 Successfully implemented a structured DevOps lifecycle integrating AWS, GitHub, Ansible, Jenkins and Docker to automate application build, testing and deployment workflows.
+## 10. Project Architecture Diagram
+
+The following diagram represents the AWS DevOps CI/CD architecture implemented for Abode Software.
+
+```mermaid
+flowchart TD
+A[GitHub Repository]
+B[Master Branch]
+C[Develop Branch]
+D[GitHub Webhook]
+E[Jenkins Master EC2]
+F[Job 1 - Build]
+G[Job 2 - Test]
+H[Job 3 - Production]
+I[Ansible Configuration Management]
+J[Test EC2 Instance]
+K[Production EC2 Instance]
+L[Dockerfile]
+M[Application Container]
+
+A --> B
+A --> C
+B --> D
+C --> D
+D --> E
+E --> F
+F --> L
+L --> M
+E --> G
+G --> J
+E --> H
+H --> K
+E --> I
+I --> J
+I --> K
+```
